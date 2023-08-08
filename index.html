@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <title>svsv</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #parent {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .parent1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 50%;
+        background-color: bisque;
+        border: 1px solid rgb(186, 43, 43);
+      }
+
+      .child {
+        display: flex;
+        height: 50%;
+        width: 50%;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div class="parent1">
+        <!-- <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div> -->
+      </div>
+      <div class="parent1">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+      </div>
+    </div>
+
+    <script>
+      const child = document.querySelectorAll(".child");
+      const parent = document.querySelectorAll(".parent1");
+
+      $(".child").draggable({
+        stop: function () {},
+      });
+      $(".child").resizable({
+        stop: function () {},
+      });
+
+      for (let ele of parent) {
+        ele.addEventListener("click", () => {
+          // do somehting
+          console.log("jbsjfcbbwu   ");
+          alert("CLICKED");
+        });
+      }
+    </script>
+  </body>
+</html>
